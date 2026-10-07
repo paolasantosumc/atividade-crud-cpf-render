@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>GET - Consultar</title><link rel="stylesheet" href="/css/style.css"></head>
+<body><main class="container page">
+  <div class="topbar"><div><span class="badge">GET /pessoas</span><h1>Consultar pessoas</h1></div><a href="/">← Início</a></div>
+  <section class="panel"><form id="buscaForm">
+    <div class="field"><label for="cpfBusca">Buscar por CPF</label><input id="cpfBusca" placeholder="000.000.000-00"></div>
+    <div class="actions"><button class="primary" type="submit">Buscar CPF</button><button class="secondary" type="button" id="listarTodos">Listar todos</button></div>
+  </form><div id="message" class="message"></div></section>
+  <section class="panel"><div class="table-wrap"><table><thead><tr><th>ID</th><th>Nome</th><th>Sobrenome</th><th>E-mail</th><th>Idade</th><th>Telefone</th><th>CPF</th><th>Endereço</th><th>RG</th></tr></thead><tbody id="tabela"></tbody></table></div><p id="vazio" class="small">Carregando...</p></section>
+</main><script src="./script.js"></script></body></html>

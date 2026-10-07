@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>PUT - Editar</title><link rel="stylesheet" href="/css/style.css"></head>
+<body><main class="container page">
+  <div class="topbar"><div><span class="badge">PUT /pessoas/:id</span><h1>Editar pessoa</h1></div><a href="/">← Início</a></div>
+  <section class="panel"><form id="buscaForm">
+    <div class="field"><label for="cpfBusca">CPF do cadastro</label><input id="cpfBusca" required placeholder="000.000.000-00"></div>
+    <div class="actions"><button class="primary">Buscar cadastro</button></div>
+  </form></section>
+  <section class="panel"><form id="formEdicao" hidden>
+    <input id="id" type="hidden">
+    <div class="field"><label for="nome">Nome *</label><input id="nome" required></div><div class="field"><label for="sobrenome">Sobrenome *</label><input id="sobrenome" required></div>
+    <div class="field"><label for="email">E-mail *</label><input id="email" type="email" required></div><div class="field"><label for="idade">Idade *</label><input id="idade" type="number" required></div>
+    <div class="field"><label for="telefone">Telefone *</label><input id="telefone" required></div><div class="field"><label for="cpf">CPF *</label><input id="cpf" required></div>
+    <div class="field"><label for="rua">Rua *</label><input id="rua" required></div><div class="field"><label for="bairro">Bairro *</label><input id="bairro" required></div>
+    <div class="field"><label for="cidade">Cidade *</label><input id="cidade" required></div><div class="field"><label for="estado">Estado *</label><input id="estado" maxlength="2" required></div>
+    <div class="field"><label for="rg">RG *</label><input id="rg" required></div>
+    <div class="actions"><button class="success">Salvar alterações</button></div>
+  </form><div id="message" class="message"></div></section>
+</main><script src="./script.js"></script></body></html>

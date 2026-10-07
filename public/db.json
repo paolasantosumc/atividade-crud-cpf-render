@@ -1,0 +1,46 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Maria",
+      "sobrenome": "Silva",
+      "email": "maria@email.com",
+      "idade": 20,
+      "telefone": "11999999999",
+      "cpf": "123.456.789-00",
+      "rua": "Rua das Flores",
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "rg": "12.345.678-9"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "sobrenome": "Santos",
+      "email": "pedro@email.com",
+      "idade": 30,
+      "telefone": "11988888888",
+      "cpf": "111.222.333-44",
+      "rua": "Rua Azul",
+      "bairro": "Jardim",
+      "cidade": "São Roque",
+      "estado": "SP",
+      "rg": "23.456.789-0"
+    },
+    {
+      "id": 3,
+      "nome": "Tiago",
+      "sobrenome": "Oliveira",
+      "email": "tiago@email.com",
+      "idade": 70,
+      "telefone": "11977777777",
+      "cpf": "999.888.777-66",
+      "rua": "Rua Verde",
+      "bairro": "Alto",
+      "cidade": "Mogi das Cruzes",
+      "estado": "SP",
+      "rg": "34.567.890-1"
+    }
+  ]
+}
