@@ -16,13 +16,13 @@ function render(data) {
   });
 }
 
-async function carregar(url = '/pessoas') {
+async function carregar(url = '/api/pessoas') {
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Erro ao consultar os registros.');
     const data = await response.json();
     render(data);
-    if (url !== '/pessoas') showMessage(data.length ? 'CPF encontrado.' : 'Nenhum cadastro encontrado para este CPF.', Boolean(data.length));
+    if (url !== '/api/pessoas') showMessage(data.length ? 'CPF encontrado.' : 'Nenhum cadastro encontrado para este CPF.', Boolean(data.length));
     else message.className = 'message';
   } catch (error) { showMessage(error.message, false); }
 }
@@ -31,7 +31,7 @@ document.getElementById('buscaForm').addEventListener('submit', event => {
   event.preventDefault();
   const cpf = document.getElementById('cpfBusca').value.trim();
   if (!cpf) return showMessage('Digite um CPF para realizar a busca.', false);
-  carregar(`/pessoas?cpf=${encodeURIComponent(cpf)}`);
+  carregar(`/api/pessoas?cpf=${encodeURIComponent(cpf)}`);
 });
 document.getElementById('listarTodos').addEventListener('click', () => carregar());
 carregar();
