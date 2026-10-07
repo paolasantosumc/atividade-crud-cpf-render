@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const router = jsonServer.router(
-    path.join(__dirname, 'db.json')
+    path.join(__dirname, 'public', 'db.json')
 );
 
 const middlewares = jsonServer.defaults();
@@ -28,5 +28,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Servidor iniciado na porta ${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
