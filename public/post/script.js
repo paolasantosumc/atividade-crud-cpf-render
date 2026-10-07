@@ -11,7 +11,7 @@ form.addEventListener('submit', async (event) => {
   const cpf = document.getElementById('cpf').value.trim();
 
   try {
-    const consulta = await fetch(`/pessoas?cpf=${encodeURIComponent(cpf)}`);
+    const consulta = await fetch(`/api/pessoas?cpf=${encodeURIComponent(cpf)}`);
     const existentes = await consulta.json();
     if (existentes.length) return showMessage('Já existe um cadastro com este CPF.', false);
 
@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
     ['nome','sobrenome','email','idade','telefone','cpf','rua','bairro','cidade','estado','rg']
       .forEach(campo => pessoa[campo] = document.getElementById(campo).value.trim());
 
-    const response = await fetch('/pessoas', {
+    const response = await fetch('/api/pessoas', {
       method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(pessoa)
     });
     if (!response.ok) throw new Error('Não foi possível cadastrar.');
